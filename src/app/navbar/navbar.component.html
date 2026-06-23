@@ -1,0 +1,18 @@
+<nav [class.scrolled]="scrolled">
+  <div class="nav-inner">
+    <div class="logo" (click)="scrollTo('hero')">
+      <span class="logo-icon">💧</span>
+      <span class="logo-text">Santa Lucía</span>
+    </div>
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li><a (click)="scrollTo('hero')">Inicio</a></li>
+      <li><a (click)="scrollTo('productos')">Productos</a></li>
+      <li><a (click)="scrollTo('ubicaciones')">Ubicaciones</a></li>
+      <li><a (click)="scrollTo('contacto')">Contacto</a></li>
+      <li><a class="btn-nav" (click)="scrollTo('contacto')">Pedir Agua</a></li>
+    </ul>
+    <button class="hamburger" (click)="menuOpen = !menuOpen" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

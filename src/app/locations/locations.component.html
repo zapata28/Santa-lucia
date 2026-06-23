@@ -1,0 +1,75 @@
+<section id="ubicaciones" class="locations-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Dónde Estamos</span>
+      <h2 class="section-title">Cerca de ti, siempre</h2>
+      <p class="section-subtitle">Con 5 puntos de distribución en el Área Metropolitana de Bucaramanga, estamos listos para servirte.</p>
+    </div>
+
+    <div class="locations-layout">
+      <div class="locations-list">
+        <div
+          class="location-item"
+          *ngFor="let loc of locations; let i = index"
+          [class.active]="activeLocation === i"
+          [class.flagship]="loc.flagship"
+          (click)="activeLocation = i">
+          <div class="loc-marker">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="loc-info">
+            <div class="loc-header">
+              <span class="loc-city">{{ loc.city }}</span>
+              <span class="flagship-badge" *ngIf="loc.flagship">Sede Principal</span>
+            </div>
+            <span class="loc-address">{{ loc.address }}</span>
+          </div>
+          <div class="loc-arrow">›</div>
+        </div>
+      </div>
+
+      <div class="location-detail" *ngIf="locations[activeLocation] as loc">
+        <div class="detail-map">
+          <div class="map-placeholder">
+            <div class="map-pin">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <span>{{ loc.city }}</span>
+          </div>
+        </div>
+
+        <div class="detail-info">
+          <h3>{{ loc.city }}</h3>
+          <div class="detail-rows">
+            <div class="detail-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>{{ loc.address }}</span>
+            </div>
+            <div class="detail-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l1.58-1.58a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a [href]="'tel:' + loc.phone">{{ loc.phone }}</a>
+            </div>
+            <div class="detail-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>{{ loc.hours }}</span>
+            </div>
+            <div class="detail-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a [href]="'mailto:' + loc.email">{{ loc.email }}</a>
+            </div>
+          </div>
+          <a [href]="'https://maps.google.com/?q=Santa+Lucia+Agua+' + loc.city + '+Colombia'" target="_blank" class="maps-btn">
+            Ver en Google Maps
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

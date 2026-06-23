@@ -1,0 +1,37 @@
+<section id="productos" class="products-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Nuestros Productos</span>
+      <h2 class="section-title">Agua para cada necesidad</h2>
+      <p class="section-subtitle">
+        Desde el consumo personal hasta el suministro empresarial, tenemos la solución perfecta
+        para mantenerte hidratado con la mejor calidad.
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let p of products">
+        <div class="card-top">
+          <span class="product-tag">{{ p.tag }}</span>
+          <span class="product-icon">{{ p.icon }}</span>
+        </div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <div class="card-footer">
+          <span class="price">{{ p.price }}</span>
+          <button class="order-btn" onclick="document.getElementById('contacto')?.scrollIntoView({behavior:'smooth'})">Pedir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quality-strip">
+    <div class="quality-inner">
+      <div class="q-item"><span>✓</span> Libre de contaminantes</div>
+      <div class="q-item"><span>✓</span> pH balanceado</div>
+      <div class="q-item"><span>✓</span> Sin cloro ni químicos</div>
+      <div class="q-item"><span>✓</span> Certificado INVIMA</div>
+      <div class="q-item"><span>✓</span> Envasado hermético</div>
+    </div>
+  </div>
+</section>
