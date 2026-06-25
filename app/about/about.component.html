@@ -1,0 +1,66 @@
+<section id="nosotros">
+
+  <!-- Quiénes somos -->
+  <div class="quienes">
+    <div class="container">
+      <div class="quienes-grid">
+        <div class="quienes-text">
+          <span class="section-label">Quiénes Somos</span>
+          <h2 class="section-title">Más que agua,<br>somos confianza</h2>
+          <p>
+            En Agua Santa Lucía creemos que el agua pura es sinónimo de bienestar. Con más de 10 años de experiencia,
+            nos dedicamos a la purificación, envasado y distribución de agua de la más alta calidad,
+            comprometidos con ofrecerte un producto fresco, seguro y accesible.
+          </p>
+          <p>
+            Cada gota que llega a tu hogar pasa por un cuidadoso proceso de filtrado y purificación,
+            porque nuestra prioridad es tu salud y la confianza que depositas en nosotros.
+          </p>
+          <div class="quienes-badge">
+            <span>🌿 Fuente Natural</span>
+            <span>✅ Agua Potable Tratada</span>
+            <span>📋 INVIMA</span>
+          </div>
+        </div>
+        <div class="quienes-visual">
+          <div class="logo-3d">
+            <div class="logo-circle">
+              <span class="logo-script">Agua<br>Santa Lucía</span>
+              <span class="logo-sub">Fuente Natural</span>
+            </div>
+            <div class="splash-ring ring1"></div>
+            <div class="splash-ring ring2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Qué nos hace diferentes -->
+  <div class="diferentes">
+    <div class="container">
+      <div class="diferentes-header">
+        <span class="section-label" style="color: #F5C518">Nuestra Diferencia</span>
+        <h2 style="color: white; font-family: 'Playfair Display', serif; font-size: clamp(2rem,4vw,2.8rem);">¿Qué nos hace diferentes?</h2>
+        <p style="color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 520px; margin: 0 auto;">
+          En Agua Santa Lucía no solo purificamos agua, purificamos confianza.
+        </p>
+      </div>
+      <div class="dif-grid">
+        <div class="dif-card" *ngFor="let d of diferencias">
+          <div class="dif-icon">{{ d.icon }}</div>
+          <h3>{{ d.title }}</h3>
+          <p>{{ d.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slogan final -->
+  <div class="slogan-strip">
+    <span class="slogan-text">Agua Santa Lucía</span>
+    <span class="slogan-sep">—</span>
+    <span class="slogan-sub">Pureza en cada gota.</span>
+  </div>
+
+</section>

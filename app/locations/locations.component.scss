@@ -44,7 +44,11 @@
 
   .dept-icon { font-size: 1.5rem; }
 
-  h3 { font-size: 1.2rem; color: var(--blue-deep); flex: 1; }
+  h3 {
+    font-size: 1.2rem;
+    color: var(--blue-deep);
+    flex: 1;
+  }
 }
 
 .town-count {

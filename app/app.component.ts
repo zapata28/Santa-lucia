@@ -10,7 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, CarouselComponent,AboutComponent, ProductsComponent, LocationsComponent, ContactComponent, FooterComponent],
+  imports: [NavbarComponent, CarouselComponent, AboutComponent, ProductsComponent, LocationsComponent, ContactComponent, FooterComponent],
   template: `
     <app-navbar></app-navbar>
     <main>

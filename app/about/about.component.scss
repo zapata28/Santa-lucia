@@ -1,0 +1,184 @@
+.quienes {
+  background: var(--ice);
+  padding: var(--section-pad);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quienes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.quienes-text {
+  p {
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+}
+
+.quienes-badge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.9rem;
+    background: white;
+    border: 1.5px solid var(--blue-mid);
+    color: var(--blue-deep);
+    border-radius: 50px;
+  }
+}
+
+.quienes-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-3d {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1A35B5, #0D1F6E);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(13,31,110,0.3);
+  z-index: 2;
+  position: relative;
+}
+
+.logo-script {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.logo-sub {
+  font-size: 0.7rem;
+  color: #F5C518;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.splash-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(13,31,110,0.15);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.ring1 { width: 230px; height: 230px; animation-delay: 0s; }
+.ring2 { width: 260px; height: 260px; animation-delay: 1s; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.04); opacity: 0.2; }
+}
+
+/* Qué nos hace diferentes */
+.diferentes {
+  background: var(--blue-deep);
+  padding: var(--section-pad);
+}
+
+.diferentes-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dif-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.dif-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+
+  &:hover {
+    background: rgba(245,197,24,0.1);
+    border-color: rgba(245,197,24,0.3);
+    transform: translateY(-4px);
+  }
+
+  .dif-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #F5C518;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+  }
+}
+
+/* Slogan strip */
+.slogan-strip {
+  background: #F5C518;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.slogan-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0D1F6E;
+}
+
+.slogan-sep { color: #0D1F6E; font-size: 1.2rem; opacity: 0.5; }
+
+.slogan-sub {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #0D1F6E;
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 900px) {
+  .quienes-grid { grid-template-columns: 1fr; }
+  .quienes-visual { display: none; }
+  .dif-grid { grid-template-columns: 1fr; }
+}

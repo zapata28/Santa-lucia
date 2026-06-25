@@ -1,14 +1,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --blue-deep: #0A2540;
-  --blue-mid: #0E4D78;
-  --aqua: #00B4D8;
-  --aqua-light: #90E0EF;
-  --ice: #F0F9FF;
+  --blue-deep: #0D1F6E;
+  --blue-mid: #1A35B5;
+  --blue-light: #2A4FC7;
+  --yellow: #F5C518;
+  --yellow-dark: #D4A800;
   --white: #FFFFFF;
-  --gray: #64748B;
-  --gray-light: #CBD5E1;
+  --ice: #F0F4FF;
+  --gray: #5A6A8A;
+  --gray-light: #C8D0E0;
   --section-pad: 5rem 1.5rem;
 }
 
@@ -35,7 +36,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--aqua);
+  color: var(--yellow-dark);
   margin-bottom: 0.75rem;
   display: block;
 }
@@ -54,4 +55,4 @@ a { text-decoration: none; color: inherit; }
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--ice); }
-::-webkit-scrollbar-thumb { background: var(--aqua-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: var(--blue-light); border-radius: 3px; }
