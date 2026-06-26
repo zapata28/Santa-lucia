@@ -1,6 +1,6 @@
 .quienes {
   background: var(--ice);
-  padding: var(--section-pad);
+  padding: 2rem 1.5rem;
 }
 
 .container {
@@ -28,7 +28,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-top: 1.5rem;
+  margin-top: 0.7rem;
 
   span {
     font-size: 0.8rem;
@@ -105,7 +105,7 @@
 
 .diferentes {
   background: var(--blue-deep);
-  padding: var(--section-pad);
+  padding: 2rem 1.5rem;
 }
 
 .diferentes-header {

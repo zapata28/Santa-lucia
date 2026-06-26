@@ -1,6 +1,6 @@
 .contact-section {
   background: var(--blue-deep);
-  padding: var(--section-pad);
+  padding: 2rem 1.5rem 3rem;
 }
 
 .container {
@@ -16,7 +16,8 @@
 }
 
 .contact-left {
-  .section-title { color: white; }
+  .section-title { color: white; };
+  padding-top : 2rem;
 }
 
 .contact-cards {

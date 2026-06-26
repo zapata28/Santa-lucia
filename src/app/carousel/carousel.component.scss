@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 620px;
+  height: calc(100vh - 100px); // ← descuenta el nav
+  min-height: 540px;           // ← reduce el mínimo también
   overflow: hidden;
   background: #0D1F6E;
 }
@@ -28,15 +28,15 @@
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem 5rem;
+  padding: 0.1rem 2rem 0.2rem;
   align-items: center;
   gap: 2rem;
 }
 
 .slide-image {
-  height: 65vh;
+  height: 55vh;
   max-height: 500px;
-  max-width: 480px;
+  max-width: 440px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0,0,0,0.35);
@@ -218,13 +218,13 @@
 
 .slides-container {
   position: relative;
-  min-height: 69vh;
+  min-height: 74vh;
 }
 
 .slide-inner {
   grid-template-columns: 1fr;
   margin-top: 70px;
-  padding: 1.5rem 1.5rem 0.01rem;
+  padding: 1.5rem 1.5rem 1.5rem;
   gap: 1rem;
   height: auto;
 }
@@ -242,7 +242,7 @@
   }
 
   p { font-size: 0.9rem;
-  margin-bottom: 0.75rem;  }
+  margin-bottom: 0.75rem;
 
   .tag { font-size: 0.65rem; }
 }
@@ -280,4 +280,5 @@
   span { font-size: 0.6rem; }
 }
   .stat-divider { display: none; }
+}
 }
