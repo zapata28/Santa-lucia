@@ -24,7 +24,6 @@
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 .contact-card {
@@ -67,25 +66,6 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: white;
-}
-
-.social-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.social-btn {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--yellow);
-  border: 1px solid rgba(245,197,24,0.4);
-  padding: 0.3rem 0.9rem;
-  border-radius: 50px;
-  transition: all 0.2s;
-
-  &:hover { background: rgba(245,197,24,0.1); color: white; }
 }
 
 .form-card {

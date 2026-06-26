@@ -14,58 +14,81 @@
   .section-subtitle { margin: 0 auto; }
 }
 
-.coverage-grid {
+.locations-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 2rem;
+  align-items: start;
   margin-bottom: 2rem;
 }
 
-.dept-card {
+.departments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dept-item {
   background: white;
-  border-radius: 16px;
-  padding: 1.75rem;
   border: 1.5px solid #E2E8F0;
-  transition: all 0.3s;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.25s;
 
   &:hover {
     border-color: var(--blue-mid);
-    box-shadow: 0 8px 28px rgba(13,31,110,0.1);
-    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(13,31,110,0.08);
+  }
+
+  &.active {
+    border-color: var(--yellow);
+    background: rgba(245,197,24,0.05);
+    box-shadow: 0 4px 20px rgba(245,197,24,0.15);
+    .dept-name { color: var(--blue-deep); font-weight: 700; }
   }
 }
 
-.dept-header {
+.dept-marker {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--ice);
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1.25rem;
-  flex-wrap: wrap;
-
-  .dept-icon { font-size: 1.5rem; }
-
-  h3 { font-size: 1.2rem; color: var(--blue-deep); flex: 1; }
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
 }
 
-.town-count {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--blue-mid);
-  background: var(--ice);
-  padding: 0.2rem 0.6rem;
-  border-radius: 50px;
-  border: 1px solid var(--gray-light);
-}
-
-.towns-list {
+.dept-info {
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
-.town {
+.dept-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--blue-deep);
+}
+
+.dept-count {
   font-size: 0.78rem;
   color: var(--gray);
+}
+
+.dept-arrow {
+  color: var(--gray-light);
+  font-size: 1.4rem;
+}
+
+.town-chip {
+  font-size: 0.78rem;
+  color: var(--blue-deep);
   background: var(--ice);
   padding: 0.25rem 0.65rem;
   border-radius: 50px;
@@ -80,6 +103,87 @@
   }
 }
 
+.detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid #F1F5F9;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.detail-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+.contact-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  &:hover { color: var(--blue-mid); }
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #25D366;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s;
+
+  &:hover { background: #1ebe5a; transform: translateY(-1px); }
+}
+
+.map-panel {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 90px;
+}
+
+.map-header {
+  background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.map-count {
+  font-size: 0.78rem;
+  background: rgba(245,197,24,0.2);
+  color: var(--yellow);
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.map-container {
+  height: 420px;
+  width: 100%;
+}
+
 .delivery-banner {
   background: var(--blue-deep);
   border-radius: 16px;
@@ -87,7 +191,6 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
 
@@ -114,60 +217,12 @@
   transition: all 0.2s;
   flex-shrink: 0;
 
-  &:hover {
-    background: white;
-    transform: translateY(-1px);
-  }
-}
-
-.contact-numbers {
-  h3 {
-    font-size: 1.3rem;
-    color: var(--blue-deep);
-    margin-bottom: 1.25rem;
-    text-align: center;
-  }
-}
-
-.numbers-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.number-card {
-  background: white;
-  border: 1.5px solid #E2E8F0;
-  border-radius: 12px;
-  padding: 1.1rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  transition: all 0.2s;
-
-  &:hover {
-    border-color: var(--yellow);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(13,31,110,0.08);
-  }
-}
-
-.number-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--gray);
-}
-
-.number-value {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--blue-deep);
+  &:hover { background: white; transform: translateY(-1px); }
 }
 
 @media (max-width: 768px) {
-  .coverage-grid { grid-template-columns: 1fr; }
-  .numbers-grid { grid-template-columns: 1fr; }
+  .locations-layout { grid-template-columns: 1fr; }
+  .map-panel { position: static; }
+  .map-container { height: 300px; }
   .delivery-banner { flex-direction: column; text-align: center; }
 }

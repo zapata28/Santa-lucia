@@ -5,20 +5,31 @@
       <h2 class="section-title">¿Dónde nos puedes encontrar?</h2>
       <p class="section-subtitle">
         Trabajamos para que el agua pura y segura llegue donde la necesitas.
-        Contamos con cobertura en Boyacá, Cundinamarca y Santander.
+        Cobertura en Boyacá, Cundinamarca y Santander.
       </p>
     </div>
 
-    <div class="coverage-grid">
-      <div class="dept-card" *ngFor="let d of departments">
-        <div class="dept-header">
-          <span class="dept-icon">{{ d.icon }}</span>
-          <h3>{{ d.name }}</h3>
-          <span class="town-count">{{ d.towns.length }} municipios</span>
+    <div class="locations-layout">
+      <div class="departments-list">
+        <div
+          class="dept-item"
+          *ngFor="let d of departments; let i = index"
+          [class.active]="activeIndex === i"
+          (click)="selectDept(i)">
+          <div class="dept-marker">{{ d.icon }}</div>
+          <div class="dept-info">
+            <span class="dept-name">{{ d.name }}</span>
+            <span class="dept-count">{{ d.towns.length }} municipios</span>
+          </div>
+          <div class="dept-arrow">›</div>
         </div>
-        <div class="towns-list">
-          <span class="town" *ngFor="let t of d.towns">{{ t }}</span>
+      </div>
+      <div class="map-panel">
+        <div class="map-header">
+          <span>{{ departments[activeIndex].icon }} {{ departments[activeIndex].name }}</span>
+          <span class="map-count">{{ departments[activeIndex].towns.length }} puntos</span>
         </div>
+        <div #mapContainer class="map-container"></div>
       </div>
     </div>
 
@@ -26,21 +37,11 @@
       <div class="delivery-icon">🚚</div>
       <div class="delivery-text">
         <strong>Entrega a domicilio disponible</strong>
-        <span>Pedidos con despacho el mismo día o al siguiente día hábil según tu municipio.</span>
+        <span>Despacho el mismo día o al siguiente día hábil según tu municipio.</span>
       </div>
       <a href="https://wa.me/57316456789" target="_blank" class="delivery-btn">
         Hacer pedido por WhatsApp
       </a>
-    </div>
-
-    <div class="contact-numbers">
-      <h3>Números de contacto</h3>
-      <div class="numbers-grid">
-        <a *ngFor="let c of contacts" [href]="c.href" target="_blank" class="number-card">
-          <span class="number-label">{{ c.label }}</span>
-          <span class="number-value">{{ c.value }}</span>
-        </a>
-      </div>
     </div>
   </div>
 </section>

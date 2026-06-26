@@ -7,6 +7,7 @@ interface Slide {
   subtitle: string;
   cta: string;
   bg: string;
+  img: string;
 }
 
 @Component({
@@ -24,23 +25,26 @@ export class CarouselComponent implements OnInit, OnDestroy {
     {
       tag: 'Pureza Natural',
       title: 'Agua Cristalina\nDe Manantial',
-      subtitle: 'Proveniente de fuentes naturales de los Andes colombianos, purificada con tecnología de última generación para tu bienestar.',
+      subtitle: 'Proveniente de fuentes naturales, purificada con tecnología de última generación para tu bienestar.',
       cta: 'Ver Productos',
-      bg: 'slide1'
+      bg: 'slide1',
+      img: 'assets/slide1.jpeg'
+    },
+    {
+      tag: 'Nuestros Productos',
+      title: 'Botella 600ml\nPara Llevar',
+      subtitle: 'Agua pura en formato individual, perfecta para el trabajo, el deporte y los viajes.',
+      cta: 'Ver Productos',
+      bg: 'slide2',
+      img: 'assets/slide2.jpeg'
     },
     {
       tag: 'Entrega a Domicilio',
       title: 'Tu Agua\nA Tu Puerta',
-      subtitle: 'Servicio de entrega confiable en toda la región. Pedidos desde 19 litros hasta distribución empresarial sin costo adicional.',
+      subtitle: 'Servicio de entrega confiable en toda la región. Llegamos el mismo día a tu hogar o negocio.',
       cta: 'Solicitar Entrega',
-      bg: 'slide2'
-    },
-    {
-      tag: 'Calidad Certificada',
-      title: 'Certificados\nY Garantizados',
-      subtitle: 'Agua tratada bajo las más estrictas normas INVIMA con control de calidad en cada proceso, desde el manantial hasta tu hogar.',
-      cta: 'Conocer Más',
-      bg: 'slide3'
+      bg: 'slide3',
+      img: 'assets/slide3.jpeg'
     }
   ];
 
