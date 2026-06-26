@@ -20,7 +20,7 @@ export class ContactComponent {
   sent = false;
 
   contacts = [
-  { label: 'WhatsApp Principal', value: '+57 316 456 7890', href: 'https://wa.me/57316456789', icon: 'whatsapp' }
+  { label: 'WhatsApp Principal', value: '+57 312 314 9269', href: 'https://wa.me/573123149269', icon: 'whatsapp' }
   ];
 
   submit() {
