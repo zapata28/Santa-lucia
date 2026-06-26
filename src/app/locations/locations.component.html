@@ -19,7 +19,6 @@
           <div class="dept-marker">{{ d.icon }}</div>
           <div class="dept-info">
             <span class="dept-name">{{ d.name }}</span>
-            <span class="dept-count">{{ d.towns.length }} municipios</span>
           </div>
           <div class="dept-arrow">›</div>
         </div>
@@ -27,7 +26,6 @@
       <div class="map-panel">
         <div class="map-header">
           <span>{{ departments[activeIndex].icon }} {{ departments[activeIndex].name }}</span>
-          <span class="map-count">{{ departments[activeIndex].towns.length }} puntos</span>
         </div>
         <div #mapContainer class="map-container"></div>
       </div>

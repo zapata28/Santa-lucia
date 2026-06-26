@@ -146,7 +146,7 @@
 
 @media (max-width: 900px) {
   .container {
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 1rem;
   }
 
   .section-header {
@@ -184,7 +184,21 @@
     padding: 0.6rem 0.75rem;
   }
 
-  .quality-strip { margin-top: 2rem; }
+  .quality-strip {
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+  .quality-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1rem;
+  padding: 0 0.5rem;
+}
+
+.q-item {
+  font-size: 0.82rem;
+}
 
   .q-item { font-size: 0.78rem; }
 
