@@ -150,5 +150,50 @@
 }
 
 @media (max-width: 900px) {
-  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-section {
+    padding: 2rem 1.25rem 1.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-left {
+    .section-title { font-size: 1.6rem; }
+    .section-subtitle { font-size: 0.88rem; }
+  }
+
+  .contact-cards {
+    margin-top: 0.75rem;
+  }
+
+  .form-card {
+    padding: 1.25rem;
+
+    h3 {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
+
+    label {
+      font-size: 0.72rem;
+      margin-bottom: 0.3rem;
+    }
+
+    input, select {
+      padding: 0.6rem 0.85rem;
+      font-size: 0.88rem;
+    }
+  }
+
+  .submit-btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
 }

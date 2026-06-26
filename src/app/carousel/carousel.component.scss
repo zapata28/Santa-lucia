@@ -235,22 +235,22 @@
     max-width: 100%;
   }
 
-  .slide-content {
-    h1 {
-      white-space: normal;
-      font-size: 1.8rem;
-    }
-
-    p { font-size: 0.9rem; }
-
-    .tag { font-size: 0.65rem; }
+.slide-content {
+  h1 {
+    white-space: normal;
+    font-size: 1.8rem;
   }
 
-  .cta-btn {
-    font-size: 0.85rem;
-    padding: 0.7rem 1.5rem;
-    display: inline-flex;
-  }
+  p { font-size: 0.9rem;
+  margin-bottom: 0.75rem;  }
+
+  .tag { font-size: 0.65rem; }
+}
+
+.cta-btn {
+  display: block;
+  margin: 0 auto;
+}
 
   .dots {
     position: relative;
