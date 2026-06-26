@@ -11,8 +11,11 @@
       <li><a (click)="scrollTo('contacto')">Contacto</a></li>
       <li><a class="btn-nav" (click)="scrollTo('contacto')">Pedir Agua</a></li>
     </ul>
+    <div class="overlay" [class.open]="menuOpen" (click)="closeMenu()"></div>
     <button class="hamburger" (click)="menuOpen = !menuOpen" aria-label="Menú">
-      <span></span><span></span><span></span>
+      <span [class.open]="menuOpen"></span>
+      <span [class.open]="menuOpen"></span>
+      <span [class.open]="menuOpen"></span>
     </button>
   </div>
 </nav>

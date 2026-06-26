@@ -14,8 +14,7 @@ export class ContactComponent {
     name: '',
     phone: '',
     city: '',
-    product: '',
-    message: ''
+    product: ''
   };
 
   sent = false;
@@ -25,7 +24,7 @@ export class ContactComponent {
   ];
 
   submit() {
-    if (this.form.name && this.form.phone && this.form.city) {
+    if (this.form.name && this.form.phone) {
       this.sent = true;
     }
   }

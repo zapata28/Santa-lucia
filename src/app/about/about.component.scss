@@ -174,9 +174,87 @@
   color: #0D1F6E;
   font-family: 'Playfair Display', serif;
 }
-
 @media (max-width: 900px) {
-  .quienes-grid { grid-template-columns: 1fr; }
-  .quienes-visual { display: none; }
-  .dif-grid { grid-template-columns: 1fr; }
+  .quienes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quienes-visual {
+    display: none;
+  }
+
+  .quienes {
+    padding: 2rem 1.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .quienes-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .quienes-badge {
+    margin-top: 1rem;
+  }
+
+  .diferentes {
+    padding: 2rem 1.5rem;
+  }
+
+  .diferentes-header {
+    margin-bottom: 1.5rem;
+
+    h2 { font-size: 1.6rem !important; }
+    p { font-size: 0.85rem; }
+  }
+
+  .dif-card {
+  padding: 0.85rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+
+  .dif-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+}
+
+.dif-grid {
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+  .slogan-strip {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .slogan-sep { display: none; }
+
+  .diferentes-header {
+  margin-bottom: 1.5rem;
+
+  h2 { font-size: 1.3rem !important; }
+  p { font-size: 0.82rem; }
+}
 }

@@ -19,4 +19,6 @@ export class NavbarComponent {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     this.menuOpen = false;
   }
+
+  closeMenu() { this.menuOpen = false; }
 }

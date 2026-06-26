@@ -144,6 +144,59 @@
   span { color: var(--yellow); font-weight: 700; font-size: 1.1rem; }
 }
 
-@media (max-width: 640px) {
-  .products-grid { grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+  .container {
+    padding: 0.5rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+
+    .section-title { font-size: 1.6rem; }
+    .section-subtitle { font-size: 0.9rem; }
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .product-card {
+    padding: 1.25rem 1rem;
+
+    .product-icon { font-size: 2rem; }
+    h3 { font-size: 1rem; }
+    .product-desc { display: none; }
+
+    .card-tag {
+      font-size: 0.6rem;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+
+  .features {
+    gap: 0.3rem;
+    li { font-size: 0.75rem; }
+  }
+
+  .order-btn {
+    font-size: 0.78rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .quality-strip { margin-top: 2rem; }
+
+  .q-item { font-size: 0.78rem; }
+
+  .products-section {
+  padding: 1.2rem 0 0;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+
+  .section-label { font-size: 0.65rem; }
+  .section-title { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .section-subtitle { font-size: 0.82rem; }
+}
 }
