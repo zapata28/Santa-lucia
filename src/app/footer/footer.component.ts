@@ -32,7 +32,6 @@ import { CommonModule } from '@angular/common';
           <h4>Contacto</h4>
           <ul>
             <li>+57 316 456 7890</li>
-            <li>+57 310 234 5678</li>
             <li>info&#64;santalucia.com.co</li>
           </ul>
         </div>

@@ -28,8 +28,7 @@
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
-  padding-bottom: 5rem;
+  padding: 5rem 2rem 6rem;
   align-items: center;
   gap: 2rem;
 }
@@ -142,7 +141,7 @@
 
 .dots {
   position: absolute;
-  bottom: 5.5rem;
+  bottom: 7rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
