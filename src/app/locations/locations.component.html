@@ -9,25 +9,20 @@
       </p>
     </div>
 
-    <div class="locations-layout">
-      <div class="departments-list">
-        <div
-          class="dept-item"
-          *ngFor="let d of departments; let i = index"
-          [class.active]="activeIndex === i"
-          (click)="selectDept(i)">
-          <div class="dept-marker">{{ d.icon }}</div>
-          <div class="dept-info">
-            <span class="dept-name">{{ d.name }}</span>
+    <div class="departments-grid">
+      <div
+        class="dept-card"
+        *ngFor="let d of departments; let i = index"
+        [class.active]="activeIndex === i"
+        (click)="activeIndex = i">
+        <div class="dept-card-header">
+          <span class="dept-icon">{{ d.icon }}</span>
+          <div>
+            <h3 class="dept-name">{{ d.name }}</h3>
+            <span class="dept-count">{{ d.towns.length }} municipios</span>
           </div>
-          <div class="dept-arrow">›</div>
         </div>
-      </div>
-      <div class="map-panel">
-        <div class="map-header">
-          <span>{{ departments[activeIndex].icon }} {{ departments[activeIndex].name }}</span>
-        </div>
-        <div #mapContainer class="map-container"></div>
+        <p class="dept-desc">{{ d.description }}</p>
       </div>
     </div>
 
