@@ -11,14 +11,14 @@ import { CommonModule } from '@angular/common';
 export class ProductsComponent {
   products = [
     {
-      image: 'assets/images/botellon-20l.jpeg',
+      image: 'assets/images/botellon.png',
       name: 'Botellón 20L',
       desc: 'El clásico para el hogar y la oficina. Retornable, económico y de fácil manejo. Compatible con todos los dispensadores del mercado. Ideal para familias y espacios de trabajo.',
       features: ['Retornable', 'Para dispensador', 'Hogar y oficina'],
       tag: 'Más vendido'
     },
     {
-      image: 'assets/slide2.jpeg',
+      image: 'assets/images/botella.png',
       name: 'Botella 600ml',
       desc: 'Perfecta para llevar a donde vayas. Agua purificada de fuente natural en formato individual, ideal para el trabajo, el estudio, el deporte y los viajes.',
       features: ['Formato individual', 'Fácil de llevar', 'Actividad física'],
